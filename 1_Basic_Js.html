@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Javascript:
+    It decides how your website behaves
+
+    ==>Client-Side Scripting Language
+
+    ==>DOM - (Document Object Model)
+
+    syntax:
+    obj.method();
+    var.method();
+    var.attributeName;
+
+    Different Types Of Js:
+    1. Internal js
+    2. External js -->
+    <h1 id="test1">vidhi</h1>
+    <h2 id="test2"></h2>
+    <h3 id="test3"></h3>
+    <b id="test4"></b>
+
+    <script>
+        // To display in Body
+        document.write("Vidhi 123 @#$^&* <u>Hello</u>");
+        document.write('Sahil Patel');
+        document.write("<h1>Usha</h1> Patel");
+        // To display in Console 
+        // which is not display in html web page 
+        // it is display in inspect->console
+
+        console.log("Vidhi 123 @#$^&* <u>Hello</u>");
+        console.log("<h1>Dushyantkumar</h1> Patel")
+
+        // add content in any tag throw script
+        console.log(document.getElementById('test1'));
+        // use innerhtml
+        document.getElementById('test1').innerHTML="Th<u><i>i</i></u>s is Js";
+        // use innertext
+        document.getElementById('test2').innerText="test123";
+        // use innertext which is not reflect html tags
+        document.getElementById('test3').innerText="Th<u><i>i</i></u>s is Js";
+
+        // add style in tag
+        document.getElementById('test4').innerHTML="Hello World";
+        document.getElementById('test4').style="color:coral;background:black;font-size:20px";
+    </script>
+
+</body>
+</html>
