@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xyz{
+            height: 100px;
+            width: 100px;
+            background: linear-gradient(lightgreen,rgb(240, 240, 64));
+            color: brown;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Heading Inline CSS</h1>
+    <h2 id="h2">Test Internal CSS</h2>
+
+    <script>
+        h1_tag=document.getElementById("h1");
+        h2_tag=document.getElementById("h2");
+
+        // Here two ways to apply css in js 
+        // 1. inline
+        // 2. internal
+
+        // inline Css Syntax
+        //    varname.style.property= "value";
+        h1_tag.style.color = "red";
+        h1_tag.style.height="100px";
+        h1_tag.style.width="100px";
+        h1_tag.style.background="lightblue";
+        // In css font-size and in js fontSize
+        h1_tag.style.fontSize="16px";
+        console.log(h1_tag);
+
+        //Apply Internal Css
+        h2_tag.classList.add('xyz');
+        console.log(h2_tag);
+
+        h2_tag.classList.remove('xyz');
+        console.log(h2_tag);
+
+        h2_tag.classList.add("xyz");
+    </script>
+</body>
+</html>

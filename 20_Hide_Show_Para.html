@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, beatae asperiores unde amet illum magnam nostrum quaerat quidem soluta praesentium debitis corporis reiciendis, consectetur porro? Explicabo impedit officia adipisci illo!</p>
+    <button onclick="hide()">Hide</button>
+    <button onclick="show()">Show</button>
+
+    <script>
+        p= document.getElementById("para");
+
+        function hide(){
+            p.style.display="none";
+        }
+
+        function show(){
+            p.style.display="block";
+        }
+    </script>
+</body>
+</html>

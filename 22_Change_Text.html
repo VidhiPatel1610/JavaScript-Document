@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x{
+            background: linear-gradient(rgb(214, 133, 147),rgb(116, 208, 238));
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1" onclick="text()">Hello</h1>
+
+    <script>
+        h1_tag=document.getElementById('h1');
+
+        function text()
+        {
+            h1_tag.innerHTML="Vidhi Patel";
+            h1_tag.classList.add('x');
+        }
+    </script>
+</body>
+</html>
