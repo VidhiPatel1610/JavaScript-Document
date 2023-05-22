@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Name : <input type="text" id="nm"><br><br>
+        Password : <input type="password" id="pwd"><br><br>
+        Confirm Password : <input type="password" id="cpwd"><br><br>
+        Mobile : <input type="text" id="mb"><br><br>
+
+        <button onclick="return xyz()">Submit</button>
+    </form>
+
+
+    <script>
+        uname=document.getElementById('nm');
+        pass=document.getElementById('pwd');
+        cpass=document.getElementById('cpwd');
+        umobile=document.getElementById('mb');
+
+        nm_ex=/^[a-zA-z]+$/;
+
+        mb_ex=/^[0-9]{10}$/;
+
+
+        function xyz()
+        {
+            if(uname.value=="")
+            {
+                alert("Name required...!!");
+                return false;
+            }
+            if(!nm_ex.test(uname.value))
+            {
+                alert("Only Letters...!!");
+                return false;
+            }
+            if(pass.value=="")
+            {
+                alert("Password required...!!");
+                return false;
+            }
+            if(pass.value !== cpass.value)
+            {
+                alert("Password do not match...!!");
+                return false;
+            }
+            if(umobile.value=="")
+            {
+                alert("Mobile required...!!");
+                return false;
+            }
+            if(!mb_ex.test(umobile.value))
+            {
+                alert("Only 10 digits...!!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

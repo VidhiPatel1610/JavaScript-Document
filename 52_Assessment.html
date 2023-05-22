@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(13, 13, 56);
+        }
+        .inp,.btn{
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .btn{
+            background: rgb(240, 181, 108);
+            font-weight: bold;
+            color: rgb(158, 64, 64);
+        }
+        #divid{
+            height: 50px;
+            width: 400px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- input tag section -->
+    <input type="text" class="inp" id="inpid">
+    <!-- button tag section -->
+    <button class="btn" id="btnid">Add</button>
+    <!-- div tag section -->
+    <div id="divid"></div>
+
+    <!-- script start -->
+    <script>
+        inputtag=document.getElementById('inpid');
+        button=document.getElementById('btnid');
+        divtag=document.getElementById('divid');
+        
+        button.addEventListener("click",()=>{
+            divtag.innerHTML=inputtag.value;
+        });
+    </script>
+    <!-- script end -->
+</body>
+</html>
