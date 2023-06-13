@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        .main{
+            height: 600px;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            
+        }
+        .left,.right{
+            height: 600px;
+            width: 360px;
+            border: 2px solid red;
+            overflow: hidden;
+        }
+
+    
+        .p1,.p2,.p3{
+            height: 50px;
+            border: 3px solid;
+            line-height: 50px;
+            font-size: 25px;
+            position: relative;
+        }
+        .p1{
+            display: flex;
+            justify-content: space-between;
+        }
+        .show{
+            display: flex;
+            justify-content: space-between;
+        }
+        .hide{
+            display: flex;
+            justify-content: space-between;
+            visibility: hidden;
+        }
+        button{
+            padding: 5px 10px;
+            font-size: 25px;
+            <!-- display: flex; -->
+            <!-- justify-content: space-between; -->
+        }
+        .ans1{
+            height: 400px;
+            width: 350px;
+            border: 2px solid green;
+            position: absolute;
+            top: -5px;
+            left: 210%;
+            transition: .5s;
+        }
+        .ans2{
+            height: 400px;
+            width: 350px;
+            border: 2px solid green;
+            position: absolute;
+            top: -55px;
+            left: 210%;
+            transition: .5s;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="p1">
+                Question 1
+                <button onclick="one()">^</button>
+                <div class="ans1">Ans 1</div>
+            </div>
+            <div class="p2">
+                <div class="show">Question 2
+                        <button onclick="second()">^</button>
+                    <div class="ans2">Ans 2</div>
+                </div>
+            </div>
+            <div class="p3">
+                <div class="hide">Question 2
+                    <button onclick="second()">^</button>
+                    <div class="ans2">Ans 2</div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+
+
+    <script>
+        leftside=document.querySelector('.left');
+        part1=document.querySelector('.p1');
+        part2=document.querySelector('.p2');
+        part3=document.querySelector('.p3');
+        a1=document.querySelector('.ans1');
+        a2=document.querySelector('.ans2');
+        show1=document.querySelector('.show');
+        hide1=document.querySelector('.hide');
+
+        console.log(a2);
+
+        function one()
+        {
+            a1.style.left="102%";
+            a2.style.left="205%";
+            show1.style.visibility="hidden";
+            hide1.style.visibility="visible";
+        }
+        function second()
+        {
+            a1.style.left="205%";
+            a2.style.left="102%";
+            show1.style.visibility="visible";
+            hide1.style.visibility="hidden";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Slider-Task </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .main * {
+            border: 2px solid;
+        }
+        
+        .main {
+            height: 500px;
+            width: 50%;
+            background-color: lightcoral;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .part1 {
+            width: 50%;
+            font-size: xx-large;
+        }
+        
+        .text1 {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .text2 {
+            position: relative;
+        }
+        
+        .show {
+            border: transparent;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hide {
+            border: transparent;
+            display: flex;
+            justify-content: space-between;
+            visibility: hidden;
+        }
+        
+        button {
+            padding: 4px 14px;
+        }
+        
+        .sub1 {
+            height: 400px;
+            width: 101%;
+            background-color: blueviolet;
+            position: absolute;
+            top: -2px;
+            left: 205%;
+            transition: 1s;
+            border: 1px solid red;
+        }
+        /* .text1:hover .sub1 {
+            left: 102%;
+        }
+         */
+        
+        .sub2 {
+            height: 400px;
+            width: 101%;
+            background-color: darkcyan;
+            position: absolute;
+            top: -43px;
+            left: 205%;
+            transition: 1s;
+            border: 1px solid red;
+        }
+        /* .text2:hover .sub2 {
+            left: 102%;
+        }
+         */
+        
+        .part2 {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="part1">
+            <div class="text1">Quation-1
+                <button onclick="hem() ">^</button>
+                <div class="sub1 "></div>
+            </div>
+            <div class="text2 ">
+                <div class="show "> Quation-2
+                    <button onclick="dem() ">^</button>
+                    <div class="sub2 "></div>
+                </div>
+            </div>
+            <div class="text3 ">
+                <div class="hide "> Quation-2
+                    <button onclick="dem()">^</button>
+                    <div class="sub2 "></div>
+                </div>
+            </div>
+        </div>
+        <div class="part2 ">
+        </div>
+    </div>
+
+    <script>
+        h1 = document.querySelector('part1')
+        qu1 = document.querySelector('.text1')
+        qu2 = document.querySelector('.text2')
+        qu3 = document.querySelector('.text3')
+        ans1 = document.querySelector('.sub1')
+        ans2 = document.querySelector('.sub2')
+        hide = document.querySelector('.show')
+        show = document.querySelector('.hide')
+
+        console.log(ans1)
+
+        function hem() {
+            ans1.style.left = '102%'
+            ans2.style.left = '205%'
+            show.style.visibility = 'visible'
+            hide.style.visibility = 'hidden'
+        }
+
+
+        function dem() {
+            hide.style.visibility = 'visible'
+            show.style.visibility = 'hidden'
+            ans2.style.left = '102%'
+            ans1.style.left = '205%'
+        }
+    </script>
+</body>
+
+</html>
