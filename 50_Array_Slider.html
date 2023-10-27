@@ -24,6 +24,7 @@
 </head>
 <body>
     <div>
+        <!-- multiple images -->
         <img src="Images/n1.jpg" alt="" height="500px" width="100%" class="x">
         <img src="Images/n2.jpg" alt="" height="500px" width="100%" class="x">
         <img src="Images/n3.jpg" alt="" height="500px" width="100%" class="x">
@@ -33,28 +34,29 @@
 
         index =0;
         
+            //slider function
               function slider()
               {
                 
                 // images = document.getElementsByClassName('x');
-        
+                //images called by tagname
                 images = document.getElementsByTagName('img');
         
                 //console.log(images);
                  //images[1].style.display = "none";
-        
+                //images array with for loop
                  for(i=0;i<images.length;i++)
                  {
                     images[i].style.display = "none";
                  }
         
-        
+                 
                  images[index].style.display = "block";
                  images[index].classList.add('xyz');
         
                 // images[index].className = "xyz";
                  index++;//0++
-        
+                 //looping start till images lenght
                  if(index==images.length)
                  {
                     index=0;

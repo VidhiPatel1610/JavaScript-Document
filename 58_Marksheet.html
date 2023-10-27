@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter Marks</h3>
+    C Language : <input type="number" id="i1"><br>
+    C++ Language : <input type="number" id="i2"><br>
+    Database : <input type="number" id="i3"><br>
+    HTML : <input type="number" id="i4"><br>
+    CSS : <input type="number" id="i5"><br>
+    php : <input type="number" id="i6"><br>
+    Core Java : <input type="number" id="i7"><br>
+
+    <button id="btn" onclick="cal()">Result</button><br>
+
+    Total is:<span id="t"></span>/350<br>
+    Percentage is:<span id="p"></span>%
+
+
+    <script>
+        inp1=document.getElementById(".i1");
+        inp2=document.getElementById(".i2");
+        inp3=document.getElementById(".i3");
+        inp4=document.getElementById(".i4");
+        inp5=document.getElementById(".i5");
+        inp6=document.getElementById(".i6");
+        inp7=document.getElementById(".i7");
+        rbtn=document.getElementById(".btn");
+        total=document.getElementById(".t");
+        p=document.getElementById(".p");
+        
+
+        function cal()
+        {
+            result=0
+            result=(inp1.value+inp2.value+inp3.value+inp4.value+inp5.value+inp6.value+inp7.value);
+            total.innerHTML=result;
+        }
+        
+    </script>
+</body>
+</html>
