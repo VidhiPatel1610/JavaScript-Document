@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const Student = {
+            Name:"Vidhi",
+            Age:22,
+            maths:86,
+            science:68,
+            English:92,
+            per: function (){
+                pervar = [this.maths+this.science+this.English]*100/300 ;
+                return pervar;
+            },
+            avg: function (){
+                avgvar =[this.maths+this.science+this.English]/3;
+                return avgvar;
+            }
+            
+
+        }
+        document.write("Student Name :"+Student.Name);
+        document.write("<br>");
+        document.write("Student Marks Total: "+ [Student.maths+Student.science+Student.English]);
+        document.write("<br>");
+        document.write("Student Percentage:"+Student.per());
+        document.write("<br>");
+        document.write("Student Average Marks:"+Student.avg());
+    </script>
+    
+</body>
+</html>

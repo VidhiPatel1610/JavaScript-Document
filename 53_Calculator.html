@@ -42,51 +42,62 @@
     </style>
 </head>
 <body>
+    <!-- Main Container Class start-->
     <div class="container">
+        <!-- calulator class start-->
         <div class="calcultor">
+            <!-- input filed  -->
             <input type="text" id="screen">
+            <!-- first row -->
             <div class="symbol" onclick="wipe()">AC</div>
             <div class="symbol" onclick="del()">DEL</div>
             <div class="symbol" onclick="test('%')" >%</div>
             <div class="symbol" onclick="test('/')">/</div>
-
+            <!-- second row -->
             <div class="symbol" onclick="test('7')">7</div>
             <div class="symbol" onclick="test('8')">8</div>
             <div class="symbol" onclick="test('9')">9</div>
             <div class="symbol" onclick="test('*')">*</div>
-
+            <!-- third row -->
             <div class="symbol" onclick="test('4')">4</div>
             <div class="symbol" onclick="test('5')">5</div>
             <div class="symbol" onclick="test('6')">6</div>
             <div class="symbol" onclick="test('+')">+</div>
-
+            <!-- fourth row -->
             <div class="symbol" onclick="test('1')">1</div>
             <div class="symbol" onclick="test('2')">2</div>
             <div class="symbol" onclick="test('3')">3</div>
             <div class="symbol" onclick="test('-')">-</div>         
-            
+            <!-- fifth row -->
             <div class="symbol" onclick="calc()">=</div>
         </div>
+        <!-- calulator class end-->
     </div>
+    <!-- Main Container Class end-->
 
 
     <script>
+        //input tag id called
         op=document.getElementById('screen');
         op.value="";
 
+        //function wipe for remove text from screen
         function wipe()
         {
             op.value="";
         }
+        //function del for delete text from screen
         function del()
         {
             op.value = op.value.slice(0,-1);
         }
+        //function test for adding text in screen
         function test(e)
         {
-            console.log(e);
+            //console.log(e);
             op.value=op.value+e;
         }
+        //function calc for calculate operations
         function calc(){
             op.value=eval(op.value);
         }
